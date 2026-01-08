@@ -1,0 +1,54 @@
+<Window x:Class="LyoConsole.PortManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="端口管理器"
+        Height="650"
+        Width="900"
+        WindowStartupLocation="CenterOwner">
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Content="刷新" Command="{Binding RefreshCommand}" />
+                <Separator />
+                <TextBlock Margin="8,0,0,0" VerticalAlignment="Center" Text="提示：右键可结束选中的进程" />
+            </ToolBar>
+        </ToolBarTray>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusText}" />
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock Text="{Binding LastUpdatedText}" />
+            </StatusBarItem>
+        </StatusBar>
+
+        <DataGrid x:Name="PortsGrid"
+                  ItemsSource="{Binding Ports}"
+                  SelectedItem="{Binding SelectedPort}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  IsReadOnly="True"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  PreviewMouseRightButtonDown="PortsGrid_PreviewMouseRightButtonDown">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="结束进程" Click="KillSelected_Click" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="端口号" Binding="{Binding Port}" Width="Auto" />
+                <DataGridTextColumn Header="协议" Binding="{Binding Protocol}" Width="Auto" />
+                <DataGridTextColumn Header="进程ID" Binding="{Binding Pid}" Width="Auto" />
+                <DataGridTextColumn Header="进程名称" Binding="{Binding ProcessName}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
+

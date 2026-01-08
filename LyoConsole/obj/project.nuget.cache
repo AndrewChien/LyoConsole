@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yYF0197TmiM=",
+  "success": true,
+  "projectFilePath": "F:\\DotnetGames\\_AllDebugging\\LyoConsole\\LyoConsole\\LyoConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lyo\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
