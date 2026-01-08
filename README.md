@@ -7,8 +7,10 @@ LyoConsole多控制台管理器，用于在Windows环境下多控制台程序使
 </br>
 </br>
 
-<img src='https://github.com/AndrewChien/Blog/blob/master/source/mir01.png'/></br>
-<img src='https://github.com/AndrewChien/Blog/blob/master/source/mir02.png'/></br>
+<img src='https://github.com/AndrewChien/Blog/blob/master/source/lc_pic1.png'/></br>
+<img src='https://github.com/AndrewChien/Blog/blob/master/source/lc_pic2.png'/></br>
+<img src='https://github.com/AndrewChien/Blog/blob/master/source/lc_pic3.png'/></br>
+<img src='https://github.com/AndrewChien/Blog/blob/master/source/lc_pic4.png'/></br>
 ---
 
 # 群服及技术交流
